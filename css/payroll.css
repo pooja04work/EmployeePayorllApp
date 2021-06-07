@@ -1,15 +1,16 @@
 /* UC1 */
-body{
+
+body {
     margin: 0;
     height: 100%;
 }
 
-.header{
+.header {
     padding: 15px 0;
     background-color: #ffffff;
 }
 
-.header-content{
+.header-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -17,7 +18,7 @@ body{
     border: 0px solid green;
 }
 
-.logo-content{
+.logo-content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -37,16 +38,18 @@ body{
     text-transform: capitalize;
 }
 
-.emp-payroll{
+.emp-payroll {
     color: #42515f;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
+
 /* UC2 */
-.form-content{
+
+.form-content {
     min-height: calc(100% - 80px);
     background-color: #f7f7f7;
     display: flex;
@@ -55,7 +58,7 @@ body{
     border: 0px solid green;
 }
 
-.form{
+.form {
     width: 65%;
     padding: 44px 60px;
     background: #ffffff 0% 0% no-repeat padding-box;
@@ -65,7 +68,7 @@ body{
     opacity: 1;
 }
 
-.form-head{
+.form-head {
     font: normal normal bold 24px/37px Roboto;
     letter-spacing: 0px;
     color: #42515f;
@@ -74,7 +77,7 @@ body{
     padding-bottom: 20px;
 }
 
-.row-content{
+.row-content {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
@@ -82,33 +85,34 @@ body{
     border: 0px solid green;
 }
 
-.label{
+.label {
     min-width: 140px;
 }
 
-label{
+label {
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
 
-.text{
+.text {
     font-size: 16px;
     color: #42515f;
     opacity: 1;
     font-family: Roboto;
 }
 
-.input{
+.input {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
 }
+
 
 /* UC3 */
 
-.input{
+.input {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -116,37 +120,41 @@ label{
     resize: vertical;
 }
 
-.profile-radio-content{
+.profile-radio-content {
     display: flex;
     flex-direction: row;
 }
 
-.profile-radio-content > label{
+.profile-radio-content>label {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.profile{
+.profile {
     width: 40px;
     border-radius: 50%;
     margin-left: 12px;
 }
 
+
 /* UC4 */
-.label-text{
+
+.label-text {
     min-width: 140px;
 }
 
-.label-text{
+.label-text {
     font-size: 16px;
     color: #42515f;
     opacity: 1;
     font-family: Roboto;
 }
 
+
 /* UC5 */
-select{
+
+select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -154,5 +162,82 @@ select{
     font: normal normal 16px Roboto;
     letter-spacing: 0px;
     color: #42515f;
-    background-color: transparent ;
+    background-color: transparent;
+}
+
+
+/* UC6 */
+
+.buttonParent {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    font-size: 20px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+    background: transparent;
+    border: none;
+    font-weight: 400;
+    min-width: 140px;
+    padding: 7px 7px;
+    border: 1px solid #707070;
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+.submitButton {
+    border: 1px solid #707070;
+    background-color: #f5f5f5;
+    margin-right: 30px;
+}
+
+.cancelButton {
+    text-decoration: none;
+    text-align: center;
+}
+
+@media only screen and (max-width:960px) {
+    .cancelButton {
+        margin-left: 0px;
+    }
+    .form {
+        width: 85%;
+        padding: 44px 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .form {
+        margin-top: 10px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .uploadButton {
+        justify-content: flex-start;
+    }
+    .profile-radio-button {
+        flex-flow: wrap;
+    }
+    .submit-reset {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .submitButton {
+        margin: 0;
+    }
+    .buttonParent {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
 }
