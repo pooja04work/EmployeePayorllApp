@@ -24,11 +24,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-// UC-11
+// UC3(day 46)
 const save = () => {
     console.log("try it");
     try {
         let employeePayrollData = createEmployeePayroll();
+        createAndUpdateStorage(employeePayrollData);
         // console.log("hello");
         // console.log(employeePayrollData);
 
@@ -36,6 +37,18 @@ const save = () => {
         console.log(e);
         return;
     }
+}
+// UC4(day 46)
+function createAndUpdateStorage(employeePayrollData) {
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    if (employeePayrollList != undefined) {
+        employeePayrollList.push(employeePayrollData);
+    }
+    else {
+        employeePayrollList = [employeePayrollData];
+    }
+    alert(employeePayrollList.toString());
+    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));
 }
 
 const createEmployeePayroll = () => {
